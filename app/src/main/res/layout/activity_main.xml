@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="infoModel" type="com.example.myapplication.DataViewModel"/>
+        <import type="com.example.myapplication.Formatage"/>
+    </data>
+
+    <RelativeLayout
+            android:id="@+id/AbsoluteLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layoutPrincipal" android:gravity="center|center_vertical">
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:id="@+id/linearLayoutHaut">
+
+                <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@{infoModel.data.labelHaut}"
+                        android:id="@+id/textViewHaut"
+                        android:layout_weight="10"/>
+
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="10"
+                        android:id="@+id/editTextHaut"
+                        android:layout_weight="10"
+                        app:formatage = "@{infoModel.data.resultatHaut.toString()}"
+                />
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_margin="20dp">
+
+                <ImageButton
+                        android:layout_width="138dp"
+                        android:layout_height="182dp"
+                        android:id="@+id/buttonHaut"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/fleche_haut"
+                        android:padding="0dp"/>
+
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="167dp"
+                        android:id="@+id/buttonBas"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/fleche_bast"
+                        android:padding="0dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:id="@+id/linearLayoutBas">
+
+                <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@{infoModel.data.labelBas}"
+                        android:id="@+id/textViewBas"
+                        android:layout_weight="10"/>
+
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number|numberDecimal"
+                        android:ems="10"
+                        android:id="@+id/editTextBas"
+                        android:layout_weight="10"
+                        app:formatage="@{infoModel.data.resultatBas.toString()}"
+                />
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <RadioButton
+                            android:text="Euro | Dollar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:id="@+id/euroUSD"/>
+                    <RadioButton
+                            android:text="Euro | Grivnya"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:id="@+id/euroUAH"/>
+                    <RadioButton
+                            android:text="Dollar | Peso"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:id="@+id/dollarPeso"/>
+                </RadioGroup>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
