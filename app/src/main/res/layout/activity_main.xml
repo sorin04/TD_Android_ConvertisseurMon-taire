@@ -110,11 +110,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" android:id="@+id/euroUSD"/>
                     <RadioButton
-                            android:text="Euro | Grivnya"
+                            android:text="Euro | MDL"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" android:id="@+id/euroUAH"/>
                     <RadioButton
-                            android:text="Dollar | Peso"
+                            android:text="Dollar | RUB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" android:id="@+id/dollarPeso"/>
                 </RadioGroup>

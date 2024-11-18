@@ -30,6 +30,7 @@ android {
     }
 
     buildFeatures {
+        buildFeatures
         dataBinding = true
     }
 
