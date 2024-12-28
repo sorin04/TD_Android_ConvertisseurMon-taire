@@ -12,7 +12,7 @@
 
 - **Kotlin** : Langage de programmation principal.
 - **Android SDK** : Ensemble d'outils pour le développement d'applications Android.
-- **API de taux de change** : Intégration d'une API pour obtenir les taux de change en temps réel.
+
 
 ## Prérequis
 
